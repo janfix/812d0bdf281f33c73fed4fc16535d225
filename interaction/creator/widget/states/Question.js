@@ -29,60 +29,26 @@ define([
 
     var relatemInteractionStateQuestion = stateFactory.extend(Question, function() {
 
-        var $container = this.widget.$container,
-            interaction = this.widget.element;
-
-        simpleEditor.create($container, '.relatem-label-min', function(text) {
-            interaction.prop('label-min', text);
-        });
-
-        simpleEditor.create($container, '.relatem-label-max', function(text) {
-            interaction.prop('label-max', text);
-        });
-
     }, function() {
-
-        simpleEditor.destroy(this.widget.$container);
+        
     });
 
     relatemInteractionStateQuestion.prototype.initForm = function() {
 
+        $(".relatemInteraction").parent().parent().find('.state-switcher').hide();
+
         var _widget = this.widget,
             $form = _widget.$form,
             interaction = _widget.element,
-            response = interaction.getResponseDeclaration(),
-            level = parseInt(interaction.prop('level')) || 5,
-            levels = [5, 7, 9],
-            levelData = {};
-
-        //build select option data for the template
-        _.each(levels, function(lvl) {
-            levelData[lvl] = {
-                label: lvl,
-                selected: (lvl === level)
-            };
-        });
+            response = interaction.getResponseDeclaration();
 
         //render the form using the form template
         $form.html(formTpl({
-            serial: response.serial,
-            levels: levelData
+            serial: response.serial
         }));
 
         //init form javascript
         formElement.initWidget($form);
-
-        //init data change callbacks
-        formElement.setChangeCallbacks($form, interaction, {
-            level: function(interaction, value) {
-
-                //update the pci property value:
-                interaction.prop('level', value);
-
-                //trigger change event:
-                interaction.triggerPci('levelchange', [parseInt(value)]);
-            }
-        });
 
     };
 

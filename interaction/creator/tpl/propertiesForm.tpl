@@ -2,7 +2,7 @@
     <p><b>PCI conçue par la DEPP</b></p>
     <p>Ministère de l'éducation nationale</p>
     <p>France</p>
-    <p>PCI - IMS-1EdTech compliant version</p>
+    <p>PCI - IMS-1EdTech compliant version 2023</p>
     <p>Réalisation <a href='http://www.wiquid.fr' target="_blank">Wiquid</a></p>
 
 </div>

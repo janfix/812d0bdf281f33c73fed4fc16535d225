@@ -35,6 +35,9 @@
     </div>
 
 
-    <div class="ansrdm">&nbsp;</div>
+    <div class="ansrdm">
+        <div class="animFilleAsw">false</div>
+        <div class="animGarsAsw">false</div>
+    </div>
 </div>
 </div>

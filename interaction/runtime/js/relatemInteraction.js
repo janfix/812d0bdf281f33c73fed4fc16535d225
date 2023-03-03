@@ -86,9 +86,7 @@ define([
         getResponse: function() {
 
             var $container = $(this.dom),
-                value = $container.find('.ansrdm').text();
-            value = value.slice(0, -1);
-
+                value = '{"animFille" :' + $container.find(".animFilleAsw").html() + ',"animGars": ' + $container.find(".animGarsAsw").html() + '}'
 
             return { base: { string: value } };
         },

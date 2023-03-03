@@ -56,10 +56,9 @@ define([
 
 
         $container.find(".activVF").click(function (event) {
-            if (anim1 == "non") {
-                $aswrdm.append(" Anim1-OK,");
-                anim1 = "anim1ok";
-            }
+            
+            $container.find(".animFilleAsw").html("true");
+            
             $vueglobale.hide();
             $vuegars.hide();
             $vuefille.show();
@@ -73,10 +72,7 @@ define([
 
 
         $container.find(".activG").click(function (event) {
-            if (anim2 == "non") {
-                $aswrdm.append(" Anim2-OK,");
-                anim2 = "anim1ok";
-            }
+            $container.find(".animGarsAsw").html("true");
             $vueglobale.hide();
             $vuegars.show();
             $vuefille.hide();
