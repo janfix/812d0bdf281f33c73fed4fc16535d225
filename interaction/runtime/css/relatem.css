@@ -2,7 +2,17 @@
 Copyright DEPP © 2017 - Ministère de l'éducation nationale  
 */
 
+
 /*add some style, need to scope (using the typeIdentifier as class prefix) every style declaration to prevent collision */
+
+.relatemInteraction {
+    font-size: unset;
+    text-align: left;
+    background: #fff;
+    font-weight: 100;
+    color: black;
+    padding-bottom: 70px!important;
+}
 
 .qti-customInteraction .relatem .ansrdm {
     display: none;
@@ -61,7 +71,7 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
     height: 366px;
     position: absolute;
     left: 10px;
-    z-index:1000;
+    z-index: 1000;
 }
 
 .qti-customInteraction .relatem .commande {
@@ -264,7 +274,6 @@ Copyright DEPP © 2017 - Ministère de l'éducation nationale
     position: absolute;
     z-index: 2;
 }
-
 
 .qti-customInteraction .relatem {
     width: 960px;
